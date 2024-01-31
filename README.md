@@ -41,12 +41,6 @@ Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos,
      - `sqlalchemy`
      - `pyspark`
 
-     Puedes instalarlas utilizando el siguiente comando:
-
-     ```bash
-     pip install pandas psycopg2 sqlalchemy pyspark
-     ```
-
 ## Requisitos Específicos para PySpark:
 
 1. **Java:**
@@ -55,17 +49,17 @@ Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos,
 
 2. **Apache Spark:**
    - Instalar [Apache Spark](https://spark.apache.org/downloads.html)
-   - Crear la carpeta "SPARK" donde se desee y guardar los archivos extraidos de la carpeta zip descargada
+   - Crear la carpeta `SPARK` donde se desee y guardar los archivos extraidos de la carpeta zip descargada
 
 3. **Winutils Hadoop:**
    - Descargar el winutils correspondiente a la versión de Hadoop instalada con Spark, para eso se puede buscar en este [Repositorio](https://github.com/kontext-tech/winutils/tree/master) la carpeta de la versión instalada, entrar a bin y descargar el ejecutable
-   - Crear la carpeta "HADOOP/bin" donde se desee y guardar ahi el ejecutable extraido
+   - Crear la carpeta `HADOOP/bin` donde se desee y guardar ahi el ejecutable extraido
 
 4. **PostgreSQL:**
-   - Buscar la carpeta "pgJDBC" dentro de la carpeta "PostgreSQL", copiar el jar file y pegarlo en la carpeta "SPARK/jars" para que PySpark pueda usar el driver para conectarse a la base de datos
+   - Buscar la carpeta `pgJDBC` dentro de la carpeta `PostgreSQL`, copiar el jar file y pegarlo en la carpeta `SPARK/jars` para que PySpark pueda usar el driver para conectarse a la base de datos
 
 5. **Variables de entorno:**
-   - Crear la variable de entorno "HADOOP_HOME" con la ruta de la carpeta "HADOOP"
-   - Crear la variable de entorno "JAVA_HOME" con la ruta de la carpeta "Java\jdk"
-   - Crear la variable de entorno "SPARK_HOME" con la ruta de la carpeta "SPARK"
+   - Crear la variable de entorno "HADOOP_HOME" con la ruta de la carpeta `HADOOP`
+   - Crear la variable de entorno "JAVA_HOME" con la ruta de la carpeta `Java\jdk`
+   - Crear la variable de entorno "SPARK_HOME" con la ruta de la carpeta `SPARK`
    - Editar la variable "path" agregando "%JAVA_HOME%\bin", "%HADOOP_HOME%\bin" y "%SPARK_HOME%\bin"
