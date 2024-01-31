@@ -41,7 +41,7 @@ Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos,
      - `sqlalchemy`
      - `pyspark`
 
-6. **Archivo:**
+6. **Archivos:**
    - Respetar la ubicación de los archivos en la carpeta para que los scripts los puedan encontrar sin problemas. Los archivos con la información de los usuarios deben estar en la carpeta `usuarios` que debe estar al mismo nivel que los scripts. Los archivo `nuevas-estaciones-bicicletas-publicas` y  `trips_2023` deben estar al mismo nivel que los scripts.
 
 ## Requisitos Específicos para PySpark:
