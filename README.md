@@ -1,25 +1,25 @@
 # Análisis de viajes Ecobici
 
-Este proyecto consiste en la estracción de datos sobre los usuarios, estaciones y viajes de la aplicación Ecobici en el año 2023 para su posterior análisis
+Este proyecto consiste en la estracción de datos sobre los usuarios, estaciones y viajes de la aplicación Ecobici en el año 2023 y el análisis de los mismos
 
 ## Descripción
 
-El proyecto esta compuesto principalmente por un proceso ETL y un reporte de Power BI. El proceso ETL se puede ejecutar utilizando la librería Pandas, con el archivo "ecobici_pandas", o utilizando la librería PySpark, con el archivo "ecobici_pyspark". La diferencia radica en que PySpark funciona mejor para el manejo de grandes volumenes de datos gracias al procesamiento distribuido, mientras que Pandas es más eficiente para volumenes más pequeños. En este proyecto la diferencia entre los tiempos de ejecución de ambos scripts no es significativa.  
-Ambos scripts extraen los datos de los usuarios desde los archivos ubicados en la carpeta "usuarios", los datos de las estaciones desde el archivo "nuevas-estaciones-bicicletas-publicas" y los datos de los viajes desde el archivo "trips_2023". De esta forma crean 3 dataframes, uno con la información de los usuarios, otro con la de las estaciones y el último con la de los viajes, y se aplican una serie de transformaciones para dejar los dataframes listos para la carga de datos.  
+El proyecto esta compuesto principalmente por un proceso ETL y un reporte de Power BI. El proceso ETL se puede ejecutar utilizando la librería Pandas, con el archivo "ecobici_pandas", o utilizando la librería PySpark, con el archivo `ecobici_pyspark`. La diferencia radica en que PySpark funciona mejor para el manejo de grandes volúmenes de datos gracias al procesamiento distribuido, mientras que Pandas es más eficiente para volúmenes más pequeños. En este proyecto la diferencia entre los tiempos de ejecución de ambos scripts no es significativa.  
+Ambos scripts extraen los datos de los usuarios desde los archivos ubicados en la carpeta `usuarios`, los datos de las estaciones desde el archivo `nuevas-estaciones-bicicletas-publicas` y los datos de los viajes desde el archivo `trips_2023`. De esta forma crean 3 dataframes, uno con la información de los usuarios, otro con la de las estaciones y el último con la de los viajes, y se aplican una serie de transformaciones para dejar los dataframes listos para la carga de datos.  
 En la última etapa del proceso ETL, los datos de cada dataframe son cargados en la tabla correspondiente de una base de datos de PostgreSQL.
 Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos, realizando consultas específicas para crear las tablas con las que se arman las visualizaciones.
 
 ## Requisitos Generales:
 
 1. **PostgreSQL:**
-   - Tener PostgreSQL instalado con los drivers pgJBDC para PySpark y psqlODBC para Pandas.
+   - Tener PostgreSQL instalado con los drivers `pgJBDC` para PySpark y `psqlODBC` para Pandas.
    - Crear una base de datos donde se cargarán los datos en el proceso ETL.
 
 2. **Python:**
    - Tener cualquier version de Python 3.6 en adelante.
 
-3. **PowerBI:**
-   - Tener PowerBI instalado.
+3. **Power BI:**
+   - Tener Power BI instalado.
 
 4. **Archivo `config.json`:**
    - Crear un archivo llamado `config.json` en la misma carpeta donde se encuentran los scripts, con el siguiente formato:
@@ -40,6 +40,9 @@ Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos,
      - `psycopg2`
      - `sqlalchemy`
      - `pyspark`
+
+6. **Archivo:**
+   - Respetar la ubicación de los archivos en la carpeta para que los scripts los puedan encontrar sin problemas. Los archivos con la información de los usuarios deben estar en la carpeta `usuarios` que debe estar al mismo nivel que los scripts. Los archivo `nuevas-estaciones-bicicletas-publicas` y  `trips_2023` deben estar al mismo nivel que los scripts.
 
 ## Requisitos Específicos para PySpark:
 
