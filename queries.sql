@@ -1,4 +1,4 @@
--- Consultas que se ejecutan en Power BI para crear las tablas
+-- Consultas
 
 -- comunas de las que más viajes parten:
 SELECT e.comuna, COUNT(*) AS cant_viajes
@@ -57,4 +57,5 @@ SELECT u.id_usuario, COUNT(*) AS cant_viajes
 FROM usuarios u
 JOIN viajes v ON u.id_usuario = v.id_usuario
 GROUP BY u.id_usuario
-ORDER BY cant_viajes DESC;
+ORDER BY cant_viajes DESC
+LIMIT 100;
