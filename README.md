@@ -22,7 +22,7 @@ Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos,
    - Tener Power BI instalado.
 
 4. **Archivo `config.json`:**
-   - Crear un archivo llamado `config.json` en la misma carpeta donde se encuentran los scripts, con el siguiente formato:
+   - Completar el archivo `config.json` con el siguiente formato:
 
      ```json
      {
