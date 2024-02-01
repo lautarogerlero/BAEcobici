@@ -4,9 +4,9 @@ Este proyecto consiste en la estracción de datos sobre los usuarios, estaciones
 
 ## Descripción
 
-El proyecto esta compuesto principalmente por un proceso ETL y un reporte de Power BI. El proceso ETL se puede ejecutar utilizando la librería Pandas, con el archivo "ecobici_pandas", o utilizando la librería PySpark, con el archivo `ecobici_pyspark`. La diferencia radica en que PySpark funciona mejor para el manejo de grandes volúmenes de datos gracias al procesamiento distribuido, mientras que Pandas es más eficiente para volúmenes más pequeños. En este proyecto la diferencia entre los tiempos de ejecución de ambos scripts no es significativa.  
+El proyecto esta compuesto principalmente por un proceso ETL y un reporte de Power BI. El proceso ETL se puede ejecutar utilizando la librería Pandas, con el archivo `ecobici_pandas`, o utilizando la librería PySpark, con el archivo `ecobici_pyspark`. La diferencia radica en que PySpark funciona mejor para el manejo de grandes volúmenes de datos gracias al procesamiento distribuido, mientras que Pandas es más eficiente para volúmenes más pequeños. En este proyecto la diferencia entre los tiempos de ejecución de ambos scripts no es significativa.  
 Ambos scripts extraen los datos de los usuarios desde los archivos ubicados en la carpeta `usuarios`, los datos de las estaciones desde el archivo `nuevas-estaciones-bicicletas-publicas` y los datos de los viajes desde el archivo `trips_2023`. De esta forma crean 3 dataframes, uno con la información de los usuarios, otro con la de las estaciones y el último con la de los viajes, y se aplican una serie de transformaciones para dejar los dataframes listos para la carga de datos.  
-En la última etapa del proceso ETL, los datos de cada dataframe son cargados en la tabla correspondiente de una base de datos de PostgreSQL.
+En la última etapa del proceso ETL, los datos de cada dataframe son cargados en la tabla correspondiente de una base de datos de PostgreSQL.  
 Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos, realizando consultas específicas para crear las tablas con las que se arman las visualizaciones.
 
 ## Requisitos Generales:
