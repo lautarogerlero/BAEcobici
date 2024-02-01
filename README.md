@@ -42,6 +42,7 @@ Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos,
      - `pyspark`
 
 6. **Archivos:**
+   - Descargar [trips_2023](https://drive.google.com/file/d/1HKD_gaHDbeC54NTdoF50-fHtnjroVLVh/view?usp=sharing), descomprimirlo y guardar el archivo en la carpeta que contiene los scripts
    - Respetar la ubicación de los archivos en la carpeta para que los scripts los puedan encontrar sin problemas. La carpeta `usuarios`, luego de ser descomprimida, debe quedar al mismo nivel que los scripts y contener los archivos correspondientes a los usuarios. El archivo `nuevas-estaciones-bicicletas-publicas` debe estar al mismo nivel que los scripts, al igual que el archivo `trips_2023` luego de ser descomprimido.
 
 ## Requisitos Específicos para PySpark:
