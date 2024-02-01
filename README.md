@@ -19,7 +19,8 @@ Finalmente, el reporte de Power BI se alimenta de los datos de la base de datos,
    - Tener cualquier version de Python 3.6 en adelante.
 
 3. **Power BI:**
-   - Tener Power BI instalado.
+   - Tener Power BI instalado
+   - Al abrir el archivo, se pueden ver las tablas y las visualizaciones creadas. Si se desea actualizar estas tablas es necesario conectarse, con sus credenciales, a la base de datos PostgreSQL que tiene las tablas con los datos ya cargados. El reporte genera 3 tablas a partir de 3 consultas SQL que estan en el archivo `queries`
 
 4. **Archivo `config.json`:**
    - Completar el archivo `config.json` con el siguiente formato:
